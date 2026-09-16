@@ -1,0 +1,39 @@
+{
+
+  "doctors": [
+
+    {
+
+      "id": 11,
+
+      "name": "Eleventh Doctor",
+
+      "actor": "Matt Smith"
+
+    }
+
+  ],
+
+  "favorite_episodes": [
+
+    {
+
+      "id": 1,
+
+      "title": "The Eleventh Hour",
+
+      "doctor_id": 11,
+
+      "season": 5,
+
+      "episode": 1,
+
+      "rating": 5,
+
+      "notes": "fairytale vibe"
+
+    }
+
+  ]
+
+}
