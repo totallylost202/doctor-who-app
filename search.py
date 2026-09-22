@@ -1,9 +1,5 @@
 import sqlite3
 
-conn = sqlite3.connect("doctor_who.db")
-
-cursor = conn.cursor()
-
 def get_season():
     while True:
         try:
@@ -23,9 +19,6 @@ def search_db(cursor, season):
     rows = cursor.fetchall()
     return rows
 
-season = get_season()
-rows = search_db(cursor, season)
-
 def display_results(rows, season):
     if not rows:
         print("No episodes found for this season.")
@@ -38,7 +31,15 @@ def display_results(rows, season):
             print(title)
             print(f"Rating: {rating}")
             print("-" * 30)
-            
-display_results(rows, season)
 
-conn.close()
+
+def main():
+    conn = sqlite3.connect("doctor_who.db")
+    cursor = conn.cursor()
+    season = get_season()
+    rows = search_db(cursor, season)
+    display_results(rows, season)
+    conn.close()
+
+if __name__ == "__main__":
+    main()
