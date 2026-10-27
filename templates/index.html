@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Who Episode Search</title>
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+<body>
+    <h1>Doctor Who Episode Search</h1>
+    <p>Find the highest-ranking episodes by season.</p>
+    <form method="post">
+    <label for="season">Season:</label>
+    <input
+        type="number"
+        id="season"
+        name="season"
+        min="1"
+        required
+    >
+    <button type="submit">Search</button>
+</form>
+
+{% if error %}
+    <p class="error-message">{{ error }}</p>
+{% endif %}
+
+{% if season %}
+    <p>You searched for Season {{ season }}</p>
+{% else %}
+    <p>Choose a season to begin.</p>
+{% endif %}
+
+{% if rows %}
+    <p>Top {{ rows | length }} episodes from Season {{ season }}</p>
+    {% for season, episode, title, rating in rows %}
+        <article class="episode-card">
+            <h3>#{{ loop.index }}. Season {{ season }}, Episode {{ episode }}:</h3>
+            <p>{{ title }}</p>
+            <p>Rating - {{ rating | round(1) }}</p> 
+            {% if rating >= 8 %}
+                <p class="highly-rated">Highly rated!</p>
+            {% endif %}
+        </article>
+    {% endfor %}
+{% else %}
+    {% if season %}
+        <p>No results for Season {{ season }}</p>
+    {% endif %}
+{% endif %}
+
+{% if error %}
+    <p class="error-message">{{ error }}</p>
+{% endif %}
+
+</body>
+</html>

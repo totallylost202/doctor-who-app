@@ -1,0 +1,74 @@
+html {
+    min-height: 100%;
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(14, 165, 233, 0.75) 5%,
+        transparent 20%,
+        rgba(0, 0, 0, 0.85) 100%
+    ),
+    conic-gradient(
+        from 0deg at center,
+        #09093D,
+        #4338CA,
+        #0EA5E9,
+        #312E81,
+        #09093D
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {
+    padding: 0 20px;
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+    color: #ffff00;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.highly-rated {
+    color: #D97706; 
+    font-weight: bold;
+}
+
+.episode-card {
+    background-color: #003b6f;
+    border: 2px solid #999896;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #999896;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D97706;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #FF6B6B;
+    font-weight: bold;
+}

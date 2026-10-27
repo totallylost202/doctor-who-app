@@ -1,5 +1,6 @@
 import sqlite3
 
+
 def get_season():
     while True:
         try:
