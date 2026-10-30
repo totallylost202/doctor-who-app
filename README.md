@@ -94,7 +94,9 @@ http://127.0.0.1:5000
 
 The Flask interface includes a styled Time Vortex-inspired background and episode result cards.
 
+
 ## Project Structure
+
 
 ```text
 doctor-who-app/
@@ -121,3 +123,16 @@ The `.env` file is stored locally and excluded from GitHub by `.gitignore`.
 ## Data Source
 
 Episode information is provided by [The Movie Database (TMDB)](https://www.themoviedb.org/).
+
+## Tests
+
+The tests verify that:
+Only episodes from the selected season are returned
+Episodes are ordered by rating
+An unknown season returns an empty list
+No more than 10 episodes are returned
+
+Run the automated tests with:
+
+```bash
+python3 -m unittest test_search.py
