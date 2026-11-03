@@ -1,5 +1,7 @@
 # Doctor Who Episode Search
 
+[![Python tests](https://github.com/totallylost202/doctor-who-app/actions/workflows/tests.yml/badge.svg)](https://github.com/totallylost202/doctor-who-app/actions/workflows/tests.yml)
+
 A Python application that retrieves Doctor Who episode data from the TMDB API, stores it in a SQLite database, and searches episodes by season.
 
 The project includes command-line, Streamlit, Tkinter, and Flask interfaces.
