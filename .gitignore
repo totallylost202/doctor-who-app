@@ -1,3 +1,6 @@
 .env
 __pycache__/
 .DS_Store
+static/fonts/
+static/tardis-icon.png
+static/tardis-icon.jpg

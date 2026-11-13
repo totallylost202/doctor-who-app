@@ -27,7 +27,7 @@ def display_results(rows, season):
         print(f"\nTop episodes from Season {season}\n")
 
         for row in rows:
-            season_number, episode_number, title, rating = row
+            season_number, episode_number, title, rating, _image = row
             print(f"Season {season_number}, Episode {episode_number}")
             print(title)
             print(f"Rating: {rating}")

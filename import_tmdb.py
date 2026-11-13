@@ -53,11 +53,19 @@ for season_info in show_data["seasons"]:
     data = response.json()
 
     for episode in data["episodes"]:
+        if episode["still_path"]:
+            image_url = (
+                "https://image.tmdb.org/t/p/w500"
+                + episode["still_path"]
+            )
+        else:
+            image_url = None
         all_episodes.append({
             "season": season,
             "episode": episode["episode_number"],
             "title": episode["name"],
-            "rating": episode["vote_average"]
+            "rating": episode["vote_average"],
+            "image": image_url
         })
 
 with open("all_episodes.json", "w") as f:
